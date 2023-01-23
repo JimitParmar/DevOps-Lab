@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.10.7-alpine' } }
 
     stages {
         stage('Takenum') {
@@ -10,8 +10,9 @@ pipeline {
                                           name: 'Number')]
             }
         }
-        stage('runalgo') {
+        stage('Build') {
             steps {
+            sh 'python --3'
                 script {
                     if (env.NUM %2==0) {
                         echo 'Number is odd'
