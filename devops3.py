@@ -18,10 +18,3 @@ def palindrome(s):
 
 
 # Driver code
-s = str(input("Enter a string to check for palindrome:"))
-ans = palindrome(s)
-
-if ans:
-	print("Yes")
-else:
-	print("No")
